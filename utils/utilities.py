@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 
 from typing import Optional
 
@@ -13,6 +14,7 @@ class AOCUtils:
         if input_path:
             self.input_path = input_path
         elif get_env:
+            load_dotenv()
             self.input_path = os.environ['INPUT_PATH']
         else:
             pass

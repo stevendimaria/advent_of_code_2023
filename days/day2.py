@@ -1,6 +1,6 @@
-from advent_of_code_2023.utils.utilities import AOCUtils
+from utils.utilities import AOCUtils
 
-UTILS = AOCUtils(input_path="/Users/stevendimaria/Desktop/AoC23")
+UTILS = AOCUtils(get_env=True)
 
 
 class Day2:

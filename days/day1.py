@@ -1,6 +1,6 @@
-from advent_of_code_2023.utils.utilities import AOCUtils
+from utils.utilities import AOCUtils
 
-UTILS = AOCUtils(input_path="/Users/stevendimaria/Desktop/AoC23")
+UTILS = AOCUtils(get_env=True)
 
 
 class Day1:
@@ -47,7 +47,11 @@ class Day1:
             if not v2:
                 ans += int(v1 + v1)
 
-        print(ans)
+        if not find_star2:
+            print(f"Day 1, Star 1 Answer: {ans}")
+        else:
+            print(f"Day 1, Star 2 Answer: {ans}")
+
         return ans
 
     def star2(self, line: str, s=None, e=None) -> str:
