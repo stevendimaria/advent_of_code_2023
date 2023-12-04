@@ -86,7 +86,7 @@ class Day3:
             if self.check_adjacent(*k):
                 self.star1_ans += v
 
-        print(self.star1_ans)
+        print(f"Day 3, Star 1 Answer: {self.star1_ans}")
         return self.star1_ans
 
     def star2(self):
@@ -152,8 +152,9 @@ class Day3:
                         c1, c2 = adj_digits.pop(), adj_digits.pop()
                         self.star2_ans += self.num_indices[c1] * self.num_indices[c2]
 
-        print(self.star2_ans)
+        print(f"Day 3, Star 2 Answer: {self.star2_ans}")
         return self.star2_ans
+
 
 if __name__ == "__main__":
     day3 = Day3(3)
