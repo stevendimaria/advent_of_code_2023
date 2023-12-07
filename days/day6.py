@@ -9,7 +9,6 @@ class Day6:
 
         self.times = [int(x) for x in inp[0].split(":")[1].split()]
         self.dists = [int(x) for x in inp[1].split(":")[1].split()]
-        self.n_races = 0
         self.races = []
         self.star2_race = [
             (
@@ -21,7 +20,6 @@ class Day6:
         self.star2_ans = 0
 
         for i in range(len(self.times)):
-            self.n_races += 1
             self.races.append((self.times[i], self.dists[i]))
 
     @staticmethod
