@@ -5,7 +5,6 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Node:
-
     def __init__(self, name: str, left=None, right=None):
         self.name = name
         self.left = left
@@ -13,7 +12,6 @@ class Node:
 
 
 class Day8:
-
     def __init__(self, day: int):
         inp = UTILS.get_input_by_line(day)
 
@@ -24,7 +22,7 @@ class Day8:
         self.star2_ans = 0
 
         for d in inp[2:]:
-            head, dirs = d.split(' = ')
+            head, dirs = d.split(" = ")
             l, r = dirs[1:4], dirs[6:9]
             if not self.nodes.get(head):
                 self.nodes[head] = Node(head)
@@ -37,16 +35,16 @@ class Day8:
             self.nodes[head].left = self.nodes[l]
 
     def star1(self):
-        curr, step = self.nodes['AAA'], 0
+        curr, step = self.nodes["AAA"], 0
 
-        while curr.name != 'ZZZ':
+        while curr.name != "ZZZ":
             self.star1_ans += 1
             if step >= self.n_steps:
                 step = 0
 
-            if self.steps[step] == 'R':
+            if self.steps[step] == "R":
                 curr = self.nodes[curr.right.name]
-            elif self.steps[step] == 'L':
+            elif self.steps[step] == "L":
                 curr = self.nodes[curr.left.name]
 
             step += 1
@@ -57,19 +55,19 @@ class Day8:
     def star2(self):
         nodes, step = [], 0
         for n in self.nodes:
-            if n[-1] == 'A':
+            if n[-1] == "A":
                 nodes.append(self.nodes[n])
 
         step_list = []
         for node in nodes:
             steps, step = 0, 0
-            while node.name[-1] != 'Z':
+            while node.name[-1] != "Z":
                 if step >= self.n_steps:
                     step = 0
 
-                if self.steps[step] == 'R':
+                if self.steps[step] == "R":
                     node = self.nodes[node.right.name]
-                elif self.steps[step] == 'L':
+                elif self.steps[step] == "L":
                     node = self.nodes[node.left.name]
 
                 step += 1
