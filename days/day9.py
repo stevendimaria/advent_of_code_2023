@@ -20,7 +20,7 @@ class Day9:
                 temp.append(seq[i] - seq[i - 1])
             out.append((seq := temp[::-1]))
 
-        ans, curr = 0, 0
+        ans = 0
         for j in range(len(out) - 1, 0, -1):
             if star == 1:
                 ans += out[j - 1][-1]
