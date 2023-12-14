@@ -14,6 +14,12 @@ class AOCUtils:
         else:
             pass
 
+    @staticmethod
+    def pretty_print_by_line(inp):
+        for li in inp:
+            print(''.join(li))
+        print()
+
     def get_input_by_line(
         self,
         day: int,
