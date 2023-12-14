@@ -17,7 +17,7 @@ class AOCUtils:
     @staticmethod
     def pretty_print_by_line(inp):
         for li in inp:
-            print(''.join(li))
+            print("".join(li))
         print()
 
     def get_input_by_line(
@@ -40,3 +40,20 @@ class AOCUtils:
         f.close()
 
         return _out
+
+
+class BiDict:
+    def __init__(self):
+        self.ht1, self.ht2 = {}, {}
+
+    def insert(self, key1, key2):
+        self.ht1[key1] = key2
+        self.ht2[key2] = key1
+
+    def fetch(self, key):
+        if self.ht1.get(key):
+            return self.ht1[key]
+        elif self.ht2.get(key):
+            return self.ht2[key]
+        else:
+            return None
