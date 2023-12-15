@@ -27,6 +27,7 @@ class AOCUtils:
         filename: Optional[str] = None,
         file_prefix: str = "input",
         filetype: str = "txt",
+        strip: bool = False
     ):
         if filepath:
             f = open(filepath)
@@ -38,6 +39,9 @@ class AOCUtils:
             )
         _out = f.readlines()
         f.close()
+
+        if strip:
+            _out = [x.strip() for x in _out]
 
         return _out
 
