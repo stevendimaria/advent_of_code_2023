@@ -12,13 +12,13 @@ class Day15:
         self.star2_ans = 0
 
     @staticmethod
-    def get_val(word: str, mult: int = 17, mod: int = 256, val: int = 0):
+    def get_val(word: str, mult: int = 17, mod: int = 256, box: int = 0):
         for ch in word:
             ascii_code = ord(ch)
-            val += ascii_code
-            val *= mult
-            val %= mod
-        return ascii_code, val
+            box += ascii_code
+            box *= mult
+            box %= mod
+        return ascii_code, box
 
     def star1(self):
         self.star1_ans = sum([self.get_val(w)[1] for w in self.directions])
@@ -39,8 +39,9 @@ class Day15:
                 boxes[box][label] = int(lens)
 
         for box_num, box in boxes.items():
-            for i, k in enumerate(box):
-                self.star2_ans += (1 + box_num) * (i + 1) * box[k]
+            for slot, label in enumerate(box):
+                focal_length = box[label]
+                self.star2_ans += (1 + box_num) * (slot + 1) * focal_length
 
         print(f"Day 15, Star 2 Answer: {self.star2_ans}")
         return self.star2_ans
