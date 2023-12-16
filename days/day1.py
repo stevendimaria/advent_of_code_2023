@@ -5,7 +5,7 @@ UTILS = AOCUtils(get_env=True)
 
 class Day1:
     def __init__(self, day: int):
-        self.calibration_values = UTILS.get_input_by_line(day=day)
+        self.calibration_values = UTILS.get_input_by_line(day)
         self.num_map = {
             "one": "1",
             "two": "2",

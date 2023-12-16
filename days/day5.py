@@ -8,7 +8,7 @@ UTILS = AOCUtils(get_env=True)
 
 class Day5:
     def __init__(self, day: int):
-        self.maps = UTILS.get_input_by_line(day)
+        self.maps = UTILS.get_input_by_line(day, strip=True)
         self.seeds = []
         self.seed_ranges = []
         self.conversions = {}
@@ -23,7 +23,6 @@ class Day5:
             out = []
             while vals:
                 _next = vals.pop(0)
-                _next = _next.rstrip("\n")
                 if not _next:
                     break
                 elif _next[0].isdigit():
@@ -35,17 +34,17 @@ class Day5:
             return out
 
         seeds = self.maps.pop(0)
-        seeds = seeds.rstrip("\n").split(":")[1].split(" ")[1:]
+        seeds = seeds.split(":")[1].split(" ")[1:]
         self.seeds = [int(s) for s in seeds]
 
         for i in range(0, len(self.seeds), 2):
             self.seed_ranges.append((self.seeds[i], self.seeds[i] + self.seeds[i + 1]))
 
         for i, _map in enumerate(self.maps):
-            if (_map == "\n") or _map[0].isdigit():
+            if not _map or _map[0].isdigit():
                 continue
 
-            _map = _map.rstrip("\n")
+            _map = _map.strip()
             self.map_order.append(_map)
             self.conversions[_map] = get_vals(self.maps[i + 1 :])
 
@@ -129,5 +128,5 @@ class Day5:
 
 if __name__ == "__main__":
     day5 = Day5(5)
-    day5.star1()  # 3244642021
+    day5.star1()  # 389056265
     day5.star2()  # 137516820

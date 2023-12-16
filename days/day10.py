@@ -9,9 +9,7 @@ UTILS = AOCUtils(get_env=True)
 
 class Day10:
     def __init__(self, day: int):
-        inp = UTILS.get_input_by_line(day)
-
-        self.map = [l.strip() for l in inp]
+        self.map = UTILS.get_input_by_line(day, strip=True)
         self.n_pipes = {"|", "L", "J", "S"}
         self.s_pipes = {"|", "7", "F", "S"}
         self.w_pipes = {"-", "J", "7", "S"}

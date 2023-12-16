@@ -5,7 +5,7 @@ UTILS = AOCUtils(get_env=True)
 
 class Day4:
     def __init__(self, day: int):
-        self.cards = UTILS.get_input_by_line(day)
+        self.cards = UTILS.get_input_by_line(day, strip=True)
         self.data = self.get_data(self.cards)
         self.num_matches = {}
         self.star1_ans = 0
@@ -16,7 +16,6 @@ class Day4:
         data = {}
 
         for card in cards:
-            card = card.rstrip("\n")
             nums = card.split(":")
             card_num = nums[0].split(" ")[-1]
             wins, plays = nums[1].split("|")
