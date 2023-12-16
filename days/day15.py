@@ -47,6 +47,7 @@ class Day15:
         return self.star2_ans
 
 
-day15 = Day15(15)
-day15.star1()  # 511416
-day15.star2()  # 290779
+if __name__ == "__main__":
+    day15 = Day15(15)
+    day15.star1()  # 511416
+    day15.star2()  # 290779
