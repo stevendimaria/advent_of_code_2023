@@ -94,8 +94,8 @@ class Day10:
         return self.star1_ans
 
     def star2(self):
-        path = self.get_path()
-        polygon = matplotlib.path.Path(path)
+        p = self.get_path()
+        polygon = matplotlib.path.Path(p)
 
         for r in range(len(self.map)):
             for c in range(len(self.map[r])):
