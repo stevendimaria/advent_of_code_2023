@@ -17,7 +17,8 @@ DAYS = [
     DAY13 := day13.Day13(),
     DAY14 := day14.Day14(),
     DAY15 := day15.Day15(),
-    DAY16 := day16.Day16()
+    DAY16 := day16.Day16(),
+    DAY17 := day17.Day17()
 ]
 
 
@@ -57,8 +58,11 @@ def run_unit_tests():
     if DAY15.star2() != DAY15_2: raise UnitError('Error in Day 15, Star2')
     if DAY16.star1() != DAY16_1: raise UnitError('Error in Day 16, Star1')
     if DAY16.star2() != DAY16_2: raise UnitError('Error in Day 16, Star2')
+    if DAY17.star1() != DAY17_1: raise UnitError('Error in Day 17, Star1')
+    if DAY17.star2() != DAY17_2: raise UnitError('Error in Day 17, Star2')
 
-    return 'Unit Tests: PASS'
+    print('Unit Tests: PASS')
+    return 0
 
 
 if __name__ == "__main__":
