@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day4:
-    def __init__(self, day: int):
+    def __init__(self, day: int=4):
         self.cards = UTILS.get_input_by_line(day, strip=True)
         self.data = self.get_data(self.cards)
         self.num_matches = {}
@@ -55,6 +55,6 @@ class Day4:
 
 
 if __name__ == "__main__":
-    day4 = Day4(4)
+    day4 = Day4()
     day4.star1()  # 21105
     day4.star2()  # 5329815

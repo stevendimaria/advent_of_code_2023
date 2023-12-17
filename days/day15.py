@@ -5,7 +5,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day15:
-    def __init__(self, day: int):
+    def __init__(self, day: int=15):
         self.directions = UTILS.get_input_by_line(day)[0].strip().split(",")
 
         self.star1_ans = 0
@@ -48,6 +48,6 @@ class Day15:
 
 
 if __name__ == "__main__":
-    day15 = Day15(15)
+    day15 = Day15()
     day15.star1()  # 511416
     day15.star2()  # 290779

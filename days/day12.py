@@ -6,7 +6,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day12:
-    def __init__(self, day: int):
+    def __init__(self, day: int=12):
         inp = UTILS.get_input_by_line(day)
 
         self.directions = [x.strip() for x in inp]
@@ -44,6 +44,6 @@ class Day12:
 
 
 if __name__ == "__main__":
-    day12 = Day12(12)
+    day12 = Day12()
     day12.star1()  # 7857
     # day12.star2()

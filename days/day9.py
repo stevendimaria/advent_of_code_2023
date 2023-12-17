@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day9:
-    def __init__(self, day: int):
+    def __init__(self, day: int=9):
         inp = UTILS.get_input_by_line(day)
 
         self.seqs = [[i for i in map(int, s.strip().split())] for s in inp]
@@ -45,6 +45,6 @@ class Day9:
 
 
 if __name__ == "__main__":
-    day9 = Day9(9)
+    day9 = Day9()
     day9.star1()  # 1684566095
     day9.star2()  # 1136

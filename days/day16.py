@@ -6,7 +6,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day16:
-    def __init__(self, day: int):
+    def __init__(self, day: int=16):
         self.tiles = UTILS.get_input_by_line(day, strip=True)
         self.dirs = {"R": [0, 1], "L": [0, -1], "U": [-1, 0], "D": [1, 0]}
         self.cache = {}
@@ -94,6 +94,6 @@ class Day16:
 
 
 if __name__ == "__main__":
-    day16 = Day16(16)
+    day16 = Day16()
     day16.star1()  # 7498
     day16.star2()  # 7846

@@ -2,22 +2,22 @@ from utils.answers import *
 from days import *
 
 DAYS = [
-    DAY1 := day1.Day1(1),
-    DAY2 := day2.Day2(2),
-    DAY3 := day3.Day3(3),
-    DAY4 := day4.Day4(4),
-    DAY5 := day5.Day5(5),
-    DAY6 := day6.Day6(6),
-    DAY7 := day7.Day7(7),
-    DAY8 := day8.Day8(8),
-    DAY9 := day9.Day9(9),
-    DAY10 := day10.Day10(10),
-    DAY11 := day11.Day11(11),
-    DAY12 := day12.Day12(12),
-    DAY13 := day13.Day13(13),
-    DAY14 := day14.Day14(14),
-    DAY15 := day15.Day15(15),
-    DAY16 := day16.Day16(16)
+    DAY1 := day1.Day1(),
+    DAY2 := day2.Day2(),
+    DAY3 := day3.Day3(),
+    DAY4 := day4.Day4(),
+    DAY5 := day5.Day5(),
+    DAY6 := day6.Day6(),
+    DAY7 := day7.Day7(),
+    DAY8 := day8.Day8(),
+    DAY9 := day9.Day9(),
+    DAY10 := day10.Day10(),
+    DAY11 := day11.Day11(),
+    DAY12 := day12.Day12(),
+    DAY13 := day13.Day13(),
+    DAY14 := day14.Day14(),
+    DAY15 := day15.Day15(),
+    DAY16 := day16.Day16()
 ]
 
 

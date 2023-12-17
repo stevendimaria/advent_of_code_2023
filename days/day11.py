@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day11:
-    def __init__(self, day: int):
+    def __init__(self, day: int=11):
         self.galaxy = UTILS.get_input_by_line(day, strip=True)
         self.n_galaxies = 0
         self.galaxies = {}
@@ -64,6 +64,6 @@ class Day11:
 
 
 if __name__ == "__main__":
-    day11 = Day11(11)
+    day11 = Day11()
     day11.star(e=2)  # 9627977
     day11.star(star_num=2, e=1000000)  # 644248339497

@@ -12,7 +12,7 @@ class Node:
 
 
 class Day8:
-    def __init__(self, day: int):
+    def __init__(self, day: int=8):
         inp = UTILS.get_input_by_line(day)
 
         self.nodes = {}
@@ -80,6 +80,6 @@ class Day8:
 
 
 if __name__ == "__main__":
-    day8 = Day8(8)
+    day8 = Day8()
     day8.star1()  # 13207
     day8.star2()  # 12324145107121

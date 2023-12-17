@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day13:
-    def __init__(self, day: int):
+    def __init__(self, day: int=13):
         inp = UTILS.get_input_by_line(day)
 
         self.patterns = [[]]
@@ -60,6 +60,6 @@ class Day13:
 
 
 if __name__ == "__main__":
-    day13 = Day13(13)
+    day13 = Day13()
     day13.star1()  # 28651
     day13.star2()  # 25450

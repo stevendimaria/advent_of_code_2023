@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day6:
-    def __init__(self, day: int):
+    def __init__(self, day: int=6):
         inp = UTILS.get_input_by_line(day)
 
         self.times = [int(x) for x in inp[0].split(":")[1].split()]
@@ -67,6 +67,6 @@ class Day6:
 
 
 if __name__ == "__main__":
-    day6 = Day6(6)
+    day6 = Day6()
     day6.star1()  # 608902
     day6.star2()  # 46173809

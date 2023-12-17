@@ -7,7 +7,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day5:
-    def __init__(self, day: int):
+    def __init__(self, day: int=5):
         self.maps = UTILS.get_input_by_line(day, strip=True)
         self.seeds = []
         self.seed_ranges = []

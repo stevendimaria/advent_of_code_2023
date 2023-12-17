@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day2:
-    def __init__(self, day: int, show_ans: int = 1):
+    def __init__(self, day: int=2, show_ans: int = 1):
         self.show_ans = show_ans
         self.games = UTILS.get_input_by_line(day)
         self.data = {}
@@ -69,6 +69,6 @@ class Day2:
 
 
 if __name__ == "__main__":
-    day2 = Day2(2)
+    day2 = Day2()
     day2.star1()  # 2439
     day2.star2()  # 63711

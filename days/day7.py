@@ -7,7 +7,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day7:
-    def __init__(self, day: int):
+    def __init__(self, day: int=7):
         inp = UTILS.get_input_by_line(day)
 
         self.hands = [
@@ -92,6 +92,6 @@ class Day7:
 
 
 if __name__ == "__main__":
-    day7 = Day7(7)
+    day7 = Day7()
     day7.star1()  # 250946742
     day7.star2()  # 251824095

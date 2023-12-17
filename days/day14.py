@@ -5,7 +5,7 @@ B = 1000000000
 
 
 class Day14:
-    def __init__(self, day: int, inp=None):
+    def __init__(self, day: int=14):
         self.inp = UTILS.get_input_by_line(day)
 
         self.platform = [[s for s in x.strip()] for x in self.inp]
@@ -97,6 +97,6 @@ class Day14:
 
 
 if __name__ == "__main__":
-    day14 = Day14(14)
+    day14 = Day14()
     day14.star1()  # 106997
     day14.star2()  # 99641
