@@ -5,7 +5,7 @@ B = 1000000000
 
 
 class Day14:
-    def __init__(self, day: int=14):
+    def __init__(self, day: int = 14):
         self.inp = UTILS.get_input_by_line(day)
 
         self.platform = [[s for s in x.strip()] for x in self.inp]

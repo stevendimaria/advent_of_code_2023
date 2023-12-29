@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day11:
-    def __init__(self, day: int=11):
+    def __init__(self, day: int = 11):
         self.galaxy = UTILS.get_input_by_line(day, strip=True)
         self.n_galaxies = 0
         self.galaxies = {}

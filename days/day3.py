@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day3:
-    def __init__(self, day: int=3):
+    def __init__(self, day: int = 3):
         self.engine_schematic = UTILS.get_input_by_line(day)
         self.line_len = len(self.engine_schematic[0])
         self.length = len(self.engine_schematic)

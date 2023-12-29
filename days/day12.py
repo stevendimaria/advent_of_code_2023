@@ -6,7 +6,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day12:
-    def __init__(self, day: int=12):
+    def __init__(self, day: int = 12):
         inp = UTILS.get_input_by_line(day)
 
         self.directions = [x.strip() for x in inp]

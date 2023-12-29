@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day6:
-    def __init__(self, day: int=6):
+    def __init__(self, day: int = 6):
         inp = UTILS.get_input_by_line(day)
 
         self.times = [int(x) for x in inp[0].split(":")[1].split()]

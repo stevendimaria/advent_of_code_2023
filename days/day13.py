@@ -4,7 +4,7 @@ UTILS = AOCUtils(get_env=True)
 
 
 class Day13:
-    def __init__(self, day: int=13):
+    def __init__(self, day: int = 13):
         inp = UTILS.get_input_by_line(day)
 
         self.patterns = [[]]
