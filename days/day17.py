@@ -66,6 +66,7 @@ class Day17:
         print(f"Day 17, Star 2 Answer: {self.star2_ans}")
         return self.star2_ans
 
+
 if __name__ == "__main__":
     day17 = Day17()
     day17.star1()  # 861
